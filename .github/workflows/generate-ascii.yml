@@ -13,18 +13,12 @@ jobs:
         - name: Install cowsay program
           run: sudo apt-get install cowsay -y
 
-        - name: Execute cowsay CMD
-          run: cowsay -f dragon "Rub for cover, I am a DRAGON....RAWR" >> dragon.txt
-        
-        - name: Test files exists
-          run: grep -i "dragon" dragon.txt
+        - name: list repo files
+          run: ls -lrat
+            
+        - name: Execute shell script
+          run: ./ascii-script.sh
 
-        - name: multiline comment
-          run: |
-            echo "My First Github Action Job"
-            ls -lrat
-            cat dragon.txt
-        
         # - name: List files
         #   run: ls
 
