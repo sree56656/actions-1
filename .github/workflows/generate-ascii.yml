@@ -1,9 +1,10 @@
 name: My First Workflow
 
-on: push
+on: 
+  push
 
 jobs:
-    first_job:
+    ascii_job:
         runs-on: ubuntu-latest
         steps:
         - name: Checkout Repo
@@ -16,7 +17,7 @@ jobs:
           run: cowsay -f dragon "Rub for cover, I am a DRAGON....RAWR" >> dragon.txt
         
         - name: Test files exists
-          uses: grep -i "dragon" dragon.txt
+          run: grep -i "dragon" dragon.txt
 
         - name: multiline comment
           run: |
