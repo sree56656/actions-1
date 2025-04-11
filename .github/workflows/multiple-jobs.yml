@@ -41,7 +41,7 @@ jobs:
             name: dragon-artifact
             
         - name: Read file
-          run: dragon.txt
+          run: cat dragon.txt
         
         - name: Deploys
           run: echo deploying... .. .
